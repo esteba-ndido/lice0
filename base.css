@@ -371,18 +371,6 @@ overflow: hidden;
   }
 }
 
-/* ===================== DUPLICADOS Y OBSERVACIONES ===================== */
-/*
-nav ul { ... }
-nav ul li { ... }
-nav ul li a { ... }
-nav ul li ul { ... }
-nav ul li ul li a { ... }
-nav ul li ul li a:hover,
-nav ul li ul li a:focus { ... }
-ESTOS BLOQUES SON DUPLICADOS respecto a nav ul.menu y nav ul.menu li a, etc.
-¡ELIMINA O AJUSTA PARA USAR SOLO nav ul.menu Y SUS HIJOS!
-*/
     
     @media (max-width: 490px) {
       .header-logo img {
@@ -471,7 +459,7 @@ ESTOS BLOQUES SON DUPLICADOS respecto a nav ul.menu y nav ul.menu li a, etc.
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     .tab-aten thead tr {
-      background-color: #424242;
+      background-color: #7e9ef7;
       color: #ffffff;        }
     .tab-aten thead th{
       
@@ -479,8 +467,9 @@ ESTOS BLOQUES SON DUPLICADOS respecto a nav ul.menu y nav ul.menu li a, etc.
       border: 2px solid #000000;
     }
     .tab-aten tbody td {
+      background-color: #b8c6ee;
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 2px solid #000000;
       text-align: center;
       }
       .t-atencion-b {
