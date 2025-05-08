@@ -29,6 +29,7 @@
     #jornada-tarde { background: #f7cac9; }
     #noticias { background: #d6eaf8; }
     #admisiones { background: #f9e79f; text-align: center;} 
+    #jornada-pre { background: #f3c0bf; }
 
   html {
     scroll-behavior: smooth;
