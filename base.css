@@ -1,0 +1,542 @@
+/* Reset  Enseñanza Básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  section#sobre-nosotros {
+    padding: 40px 20px;
+    min-height: auto;
+    
+    margin: 0 auto 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+    }
+    
+    /* Secciones */
+    section {
+    padding: 40px 20px;
+    min-height: 400px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+    }
+    #inicio { background: #f6f7f8; margin: 80px auto 40px; }
+    #sobre-nosotros { background: #f0e5cf; }
+    #jornada-manana { background: #e8f6ef; }
+    #jornada-tarde { background: #f7cac9; }
+    #noticias { background: #d6eaf8; }
+    #admisiones { background: #f9e79f; text-align: center;} 
+
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-image: url('/img/logo2.png'); /* Reemplaza con la ruta de tu imagen */
+    background-repeat: repeat;
+    background-size: 40px 40px;
+    font-family: Arial, sans-serif;    
+    padding-top: 140px;
+  }
+  .logopesta {
+    border-radius: 50%;
+  }
+  /* Contenedor del logo y nombre */
+  .header-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1b3556;
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1101;
+  
+    display: flex;
+    flex-direction: column; /* Logo y nav apilados verticalmente */
+    align-items: center;
+    
+    gap: 5px;
+  }
+  .logo-text {
+    display: flex;
+    flex-direction: row; /* Imagen y texto lado a lado */
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 900px;
+    justify-content: center;
+  }
+  .logo-text img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  .logo-text h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    white-space: nowrap;
+    color: white;
+  }
+  
+  .header-logo img {
+    width: 80px;              
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;         
+  }
+  
+  .header-logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;      
+  }
+    
+  /* Navegación sticky justo debajo del logo */
+ /* Barra de navegación principal */
+nav {
+  left: 0;
+  width: 100%;
+  background-color: #1b3556;
+  z-index: 1100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;             /* Flexbox para centrar */
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+}
+
+/* Contenedor interno del nav */
+nav .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Menú principal horizontal en escritorio */
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+nav ul.menu li {
+  position: relative;
+}
+nav ul.menu li a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: color 0.3s, background 0.3s;
+  display: block;
+}
+nav ul.menu li a:hover,
+nav ul.menu li a:focus {
+  color: #f0e68c;
+  background: #4b86a6;
+  outline: none;
+}
+
+/* Dropdown en escritorio */
+nav ul.menu li ul.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #2a4d69;
+  padding: 0.5em 0;
+  border-radius: 4px;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+nav ul.menu li:hover > ul.submenu,
+nav ul.menu li:focus-within > ul.submenu {
+  display: block;
+}
+nav ul.menu li ul.submenu li a {
+  padding: 0.5em 1.2em;
+  font-weight: normal;
+  color: white;
+}
+nav ul.menu li ul.submenu li a:hover,
+nav ul.menu li ul.submenu li a:focus {
+  background: #4b86a6;
+}
+
+/* Botón hamburguesa: oculto en escritorio */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 28px;
+  height: 22px;
+  justify-content: space-between;
+  position: absolute;
+  left: 10px; /* Siempre a la izquierda */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1102;
+  background: none;
+  border: none;
+}
+.menu-toggle span {
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+footer {
+  background-color: #2a4d69;
+  color: white;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: transparent;
+  flex-wrap: wrap;
+  }
+
+/* Cada columna ocupa un tercio del ancho */
+.footer-column {
+flex: 1 1 30%;
+min-width: 250px; /* Para evitar que se achique demasiado */
+}
+
+/* Ajustes para los títulos */
+.footer-column h2, .footer-column h3 {
+margin-bottom: 15px;
+color: #f0e68c;;
+}
+
+footer h2 {
+flex-basis: 100%;
+margin-bottom: 15px;
+color: #f0e68c;
+}
+
+.contact-info {
+flex: 1 1 300px;
+line-height: 1.6;
+}
+
+.contact-info a {
+color: #f0e68c;
+text-decoration: none;
+}
+
+.contact-info a:hover,
+.contact-info a:focus {
+text-decoration: underline;
+}
+
+.map-container {
+flex: 1 1 400px;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Hacer iframe responsivo */
+.map-container iframe {
+width: 100%;
+height: 300px;
+border: 0;
+}
+.redes-sociales {
+margin-top: 40px;
+background: #eef5fb;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgb(0 0 0 / 0.05);
+}
+
+.redes-sociales h3 {
+color: #2a4d69;
+margin-bottom: 15px;
+}
+
+.iconos-redes {
+display: flex;
+gap: 15px;
+margin-bottom: 20px;
+}
+
+.iconos-redes a img {
+width: 32px;
+height: 32px;
+filter: grayscale(100%);
+transition: filter 0.3s;
+}
+
+.iconos-redes a:hover img,
+.iconos-redes a:focus img {
+filter: none;
+cursor: pointer;
+}
+
+/* Facebook plugin responsivo */
+.fb-page, .fb-page > span, .fb-page iframe[style] {
+width: 100% !important;
+min-height: 400px !important;
+border-radius: 8px;
+overflow: hidden;
+}
+
+
+/* ===================== RESPONSIVE NAVIGATION ===================== */
+@media (max-width: 768px) {
+  /* Mostrar hamburguesa en móvil */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Menú vertical, oculto por defecto */
+  nav ul.menu {
+    flex-direction: column;
+    position: fixed;
+    top: 60px; /* Ajusta según altura nav */
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 60px);
+    background: #2a4d69;
+    padding-top: 1em;
+    border-radius: 0;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    margin-left: 0;
+    z-index: 999;
+    align-items: flex-start;
+  }
+
+  /* Mostrar menú cuando activo */
+  nav ul.menu.active {
+    transform: translateX(0);
+  }
+
+  /* Links alineados a la izquierda */
+  nav ul.menu li a {
+    color: white;
+    padding: 1em;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-align: left;
+    font-size: 1.1em;
+  }
+
+  /* Dropdown: submenu vertical, oculto por defecto */
+  nav ul.menu li ul.submenu {
+    position: static;
+    background: #3b5a7a;
+    border-radius: 0;
+    display: none;
+    padding-left: 1em;
+    margin: 0;
+    box-shadow: none;
+    min-width: 0;
+  }
+
+  /* Mostrar submenu cuando el padre tiene clase active (por JS) */
+  nav ul.menu li.dropdown.active > ul.submenu {
+    display: block;
+  }
+
+  /* Ocultar hover/focus en móvil */
+  nav ul.menu li:hover > ul.submenu,
+  nav ul.menu li:focus-within > ul.submenu {
+    display: none;
+  }
+}
+
+/* ===================== DUPLICADOS Y OBSERVACIONES ===================== */
+/*
+nav ul { ... }
+nav ul li { ... }
+nav ul li a { ... }
+nav ul li ul { ... }
+nav ul li ul li a { ... }
+nav ul li ul li a:hover,
+nav ul li ul li a:focus { ... }
+ESTOS BLOQUES SON DUPLICADOS respecto a nav ul.menu y nav ul.menu li a, etc.
+¡ELIMINA O AJUSTA PARA USAR SOLO nav ul.menu Y SUS HIJOS!
+*/
+    
+    @media (max-width: 490px) {
+      .header-logo img {
+        width: 70px;
+        height: 70px;
+      }
+    
+      .header-logo h1 {
+        font-size: 1.3rem;
+      }
+    
+      nav {
+        top: 130px;
+      }
+    
+      body {
+        padding-top: 170px;
+      }
+    }
+    @media (max-width: 1080px) {
+      .logo-text {
+        flex-direction: column;
+        gap: 10px;
+      }
+    
+      .logo-text img {
+        width: 100px;
+        height: 100px;
+      }
+    
+      .logo-text h1 {
+        white-space: normal;
+        font-size: 1.8rem;
+        text-align: center;
+      }
+    }
+    
+    
+    
+    .t-basica, .t-media {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .t-taller {
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+    }
+    .tab-taller{
+      width: 90%;
+      margin: 20px auto 40px auto;
+      border-collapse: collapse;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       
+    }
+    .tab-taller thead tr {
+      background-color: #4b86a6;
+      color: #ffffff;        }
+    .tab-taller thead th{
+      padding: 15px;
+      border: 2px solid #ccc;
+    }
+    .tab-taller tbody tr:nth-child(odd) {
+    background-color: #93D3EA; 
+    }
+    
+    .tab-taller tbody tr:nth-child(even) {
+    background-color: #DAF1F8; 
+    }
+    .tab-taller tbody td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    }
+
+
+    /* revisar esto mañana pendejo  */
+    .tab-aten{
+      font-size: 16px;
+      width: 90%;
+      margin: 20px auto 40px auto;
+      border-collapse: collapse;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .tab-aten thead tr {
+      background-color: #424242;
+      color: #ffffff;        }
+    .tab-aten thead th{
+      
+      padding: 15px;
+      border: 2px solid #000000;
+    }
+    .tab-aten tbody td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+      }
+      .t-atencion-b {
+        
+        font-family: Arial, sans-serif;
+        color: #000000;
+        text-align: center;
+        
+      }
+      .tab-aten{
+        width: 90%;
+        margin: 20px auto 40px auto;
+        border-collapse: collapse;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .t-atencion-M {
+        font-family: Arial, sans-serif;
+        color: #333;
+        text-align: center;
+      }
+      @media (max-width: 900px) {
+        
+        .t-media,
+        .t-basica,
+        .t-antencion-b,
+        .t-atencion-M {
+          min-width: 200px;
+          padding: 1em;
+          margin: 0.5em auto;
+        }
+      }
+      
+      @media (max-width: 600px) {
+        
+        .t-media,
+        .t-basica,
+        .t-antencion-b,
+        .t-atencion-M {
+          min-width: 100px;
+          padding: 0.7em;
+          font-size: 1em;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+  .t-basica, .t-media ,.t-antencion-b, .t-atencion-M {
+    padding: 0.5rem;
+    font-size: 0.6rem;
+  }
+  
+  
+}
+
+@media only screen and (max-width: 280px) {
+  .t-basica, .t-media, .tab-aten {
+    max-width: 98vw;
+    padding: 0.4em 0.5em;
+    font-size: 0.85rem;
+    border-radius: 6px;
+  }
+}
